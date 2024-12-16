@@ -7,8 +7,11 @@ void solve()
     int k, l1, r1, l2, r2;
     cin >> k >> l1 >> r1 >> l2 >> r2;
 
-    int cnt = 0;
-    for (int p = 1; p <= r2; p *= k)
+
+    // y = a.p  
+
+    int cnt = 0; // answer 
+    for (int p = 1; p <= r2; p *= k)  // -> 1 k k^2 k^3 k^4 ......
     { 
         int lowX = max(l1, (l2 + p - 1) / p); 
         int highX = min(r1, r2 / p);              

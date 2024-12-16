@@ -47,7 +47,7 @@ void solve() {
 
    set<int> st; // set is basically to prevent repetition
    for(auto x : m){
-    b[x.second] = x.first;
+    bb[x.second] = x.first;
     st.insert(x.first);
    }
 
