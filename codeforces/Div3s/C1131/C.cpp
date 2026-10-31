@@ -1,22 +1,3 @@
-/*
-C:- This one took some time. You need to realize two things, firstly mass is only lost when you split
-the leftmost or the rightmost core (one part falls off the edge), splitting a middle core keeps all
-the mass. Secondly, you can always make the lost part exactly 1.
-
-So fix the core j which survives at the end and look at both sides separately. For the left side:
--> no cores on the left: loss = 0
--> some core between 2 and j-1 has mass >= 2: split it first and keep splitting outwards (the
-   neighbours always become >= 2), only core 1 falls off the edge at the end, so loss = 1
--> all of them are 1 but core 1 is >= 2: every removal happens at the edge, so loss = j - 1
--> everything is 1: nothing can ever move, so j is not possible
-Same thing for the right side.
-
-Answer = max over j of (total - leftLoss - rightLoss), or -1 if no j works. I used a prefix count of
-cores with mass >= 2 so that every range check is O(1).
-
-Time complexity:- O(n)
-*/
-
 #include <bits/stdc++.h>
 using namespace std;
 

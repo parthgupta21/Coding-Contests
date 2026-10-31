@@ -1,20 +1,3 @@
-/*
-F:- This was the hardest one. You need to realize two things, firstly since the array is non increasing,
-a mod b <= a - b, and both are equal only when a < 2b. Secondly, the sum of (a[i] - a[i+1]) telescopes
-to a1 - an, which is at most m + 1 (that's why the limit is m + 2).
-
-So the total "waste" can only be 0 or 1. Which means every good array has to start at m + 2, go down
-to 2 with every next value > half of the previous one, and then either stop there or do one 2 -> 1
-step and stay 1 till the end.
-
-If the chain has k strict drops, there are C(n, k + 1) ways to place it inside an array of length n
-(hockey stick identity). For counting the chains I did a dp, dp[k][v] = ways to reach v from m + 2 in
-k drops. The transition is a range sum so prefix sums make it O(1), and I kept only the prev and cur
-rows (space optimization).
-
-Time complexity:- O(min(n, m) * m)
-*/
-
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,16 +1,3 @@
-/*
-A:- It was a pretty straightforward problem. Since multiplication is commutative, the order of the
-letters doesn't matter at all, only the count of every letter matters. So you just need to maintain a
-freq array of size 26, do +1 for every character of p (numerator) and -1 for every character of q
-(denominator). Cancelling a variable is basically just this subtraction.
-
-After that just check the freq array. 's', 'i' and 'x' should have exactly 1 left and every other
-letter should have exactly 0. If something is negative then that letter is stuck in the denominator,
-and if something extra is left then the numerator is not exactly "six". In both the cases it's a NO.
-
-Time complexity:- O(n + m)
-*/
-
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,18 +1,3 @@
-/*
-B:- A little tricky as you need to realize that Bob doesn't need to mix his moves at all. If Bob plays
-the same move in every round then the order of Alice's moves doesn't matter, every round looks the
-same to him.
-
-All Paper -> Bob's wins - losses = x - y (beats Rock, loses to Scissors)
-All Rock -> y - z
-All Scissors -> z - x
-
-These three add up to 0, so at least one of them has to be >= 0. Just pick that move and print it
-(x + y + z) times.
-
-Time complexity:- O(x + y + z)
-*/
-
 #include <bits/stdc++.h>
 using namespace std;
 
